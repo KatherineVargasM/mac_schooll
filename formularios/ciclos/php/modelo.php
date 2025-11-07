@@ -1,6 +1,5 @@
 <?php
 
-include '../../../login/verificar_sesion3n_mixto.php';
 require_once("../../../conexion/conexion.php");
 
 class clase_ciclos
@@ -61,6 +60,4 @@ class clase_ciclos
         $registros = $this->db->query($dmlsentencia);
         return $registros;
     }
- 
-}
-?>
+}?>
