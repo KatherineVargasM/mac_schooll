@@ -24,7 +24,7 @@ echo "<table id='tabla' name='tabla' class='table table-bordered'>
                 <td>".$fila['ASIG_CODIGO']."</td>
                 <td>".$fila['ASIG_NOMBRE']."</td>
                 <td>".$fila['ASIG_OBSERV']."</td>
-                <td class='text-center'><a href='../vistas/modificar.php?v_id=".$fila['ASIG_CODIGO']."'><img src='../../../Src/imgs/edit.png'></a></td>
+                <td class='text-center'><img src='../../../Src/imgs/edit.png' onclick='abrirModalModificar(".$fila['ASIG_CODIGO'].")' style='cursor: pointer;' title='Editar'></td>
                 <td class='text-center'><img src='../../../Src/imgs/delete.png' onclick='ajax_eli_asignatura(".$fila['ASIG_CODIGO'].");' data-bs-toggle='modal' data-bs-target='#eliminar'></td>
             </tr>";
         $f++;

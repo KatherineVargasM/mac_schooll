@@ -50,17 +50,6 @@
         </div>
     </div>
     </div>
-    <script>
-    function abrirModalFormulario() {
-
-        $("#contenidoModal").load("ingresar.php", function () {
-            var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
-            myModal.show();
-        });
-    }
-    </script>
- 
- 
  
 </html>
 

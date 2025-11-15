@@ -11,7 +11,7 @@ function ajax_buscar_ciclos(vldato)
         processData:false
     })
     .done(function(data){
-        $("#tabla").html(data);
+    $("#contenedor_tabla").html(data);
     })
     .fail(function ()
     {
@@ -92,4 +92,46 @@ function ajax_eli_asignatura(vldato) {
             alert("error al procesar la informacion");
         });
     return false;
+}
+
+function abrirModalFormulario() {
+    $("#modalFormularioLabel").text("Nueva Asignatura");
+    $("#contenidoModal").load("ingresar.php", function () {
+        var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        myModal.show();
+    });
+}
+
+/**
+ * @param {string} id
+ */
+
+function abrirModalModificar(id) {
+    $("#modalFormularioLabel").text("Modificar Asignatura");
+    var url = "modificar.php?v_id=" + id;
+    $("#contenidoModal").load(url, function () {
+        var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        myModal.show();
+    });
+}
+
+
+function abrirModalFormularioCiclo() {
+    $("#modalFormularioLabel").text("Nuevo Ciclo");
+    $("#contenidoModal").load("ingresar.php", function () {
+        var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        myModal.show();
+    });
+}
+
+/**
+ * @param {string} id
+ */
+function abrirModalModificarCiclo(id) {
+    $("#modalFormularioLabel").text("Modificar Ciclo");
+    var url = "modificar.php?v_id=" + id;
+    $("#contenidoModal").load(url, function () {
+        var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
+        myModal.show();
+    });
 }

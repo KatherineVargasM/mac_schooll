@@ -19,18 +19,25 @@ $fila=$row->fetch();
 <body>
     <form action="../php/actualizar.php" method="post">
         <input type="text" hidden id="txt_codigo" name="txt_codigo" value="<?php echo $fila['ASIG_CODIGO'];?>"> 
-        <div>
-            <h2 class="text-primary">Actualizar Asignatura</h2>
-        </div>
+
+        
         <div class="container">
-            <div class="form-group row">
-                <label class="col-2">Nombre de asignatura</label>
-                <input type="text" class="form form-control col-4" name="txt_nombre" id="txt_nombre" maxlength="20" value="<?php echo $fila['ASIG_NOMBRE'];?>"  required>
+            
+            <div class="row mb-3">
+                <label for="txt_nombre" class="col-sm-3 col-form-label">NOMBRE</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="txt_nombre" id="txt_nombre" maxlength="20" value="<?php echo $fila['ASIG_NOMBRE'];?>" required>
+                </div>
             </div>
-            <div class="form-group row">
-                <label class="col-2">Observación</label>
-                <input type="text" class="form-control col-4" name="txt_observacion" id="txt_observacion" maxlength="50" value="<?php echo $fila['ASIG_OBSERV'];?>" >
+
+            <div class="row mb-3">
+                <label for="txt_observacion" class="col-sm-3 col-form-label">OBSERVACION</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="txt_observacion" id="txt_observacion" maxlength="50" value="<?php echo $fila['ASIG_OBSERV'];?>" >
+                </div>
             </div>
+
+        </div>
             
             <div class="form-group row">
                 <label class="col-12 text-center">

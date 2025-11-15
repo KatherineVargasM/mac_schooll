@@ -13,7 +13,7 @@
     <body onload="ajax_buscar_ciclos('');">
         <div class="alert alert-light">
             <h2 class="text-primary">Gestión de Ciclos o Educación</h2>
-            <button type="button" class="btn btn-success" onclick="abrirModalFormulario()">Nuevo</button>
+            <button type="button" class="btn btn-success" onclick="abrirModalFormularioCiclo()">Nuevo</button>
             <button type="button" class="btn btn-success" onclick="reporte();">Reporte</button>
             <button type="button" class="btn btn-secondary" onclick="location.href='../../../admin.php'">← Volver al Panel Principal</button>
         </div>
@@ -23,18 +23,20 @@
                 <input type="text" class="form-control col-4" id="txt_buscar" name="txt_buscar" onkeyup="ajax_buscar_ciclos(this.value);">
              </div>
         </div>
-        <table id="tabla" name="tabla" class="table table-bordered">
-            <thead class='bg-primary text-light text-center'>
-                <tr>
-                    <th>#</th>
-                    <th>CÓDIGO</th>
-                    <th>NOMBRE</th>
-                    <th>OBSERVACIÓN</th>
-                    <th>Editar</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-        </table>
+        <div id="contenedor_tabla">
+            <table id="tabla" name="tabla" class="table table-bordered">
+                <thead class='bg-primary text-light text-center'>
+                    <tr>
+                        <th>#</th>
+                        <th>CÓDIGO</th>
+                        <th>NOMBRE</th>
+                        <th>OBSERVACIÓN</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </body>
  
     <!-- Modal para formulario -->
@@ -53,18 +55,7 @@
     </div>
     </div>
     <script>
-    function abrirModalFormulario() {
-        // Cargar el contenido vía AJAX
-        $("#contenidoModal").load("ingresar.php", function () {
-            // Mostrar el modal cuando haya terminado de cargar
-            var myModal = new bootstrap.Modal(document.getElementById('modalFormulario'));
-            myModal.show();
-        });
-    }
-    </script>
- 
- 
- 
+    
 </html>
 
 <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -10,7 +10,7 @@ require_once('modelo.php');
 $obj= new clase_ciclos();
 $result=$obj->_actualizar(
     $_POST['txt_nombre'],
-    $_POST['txt_observa'],
+    $_POST['txt_observacion'],
     $_POST['txt_codigo']);
 if($result)
 {
