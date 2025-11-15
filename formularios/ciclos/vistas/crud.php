@@ -66,3 +66,56 @@
  
  
 </html>
+
+<div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header bg-danger text-light">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar registro de ciclo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <form action="../php/eliminar.php" method="post">
+          
+          <input type="text" id="txt_codigo" name="txt_codigo" hidden>
+          
+          <div class="container">
+            
+            <div class="row">
+              <label><b>Nombres</b>:</label>
+              <input type="text" id="txt_nombre" name="txt_nombre" class="form-control" disabled>
+            </div>
+            
+            <div class="row">
+              <label><b>Observacion</b>:</label>
+              <input type="text" id="txt_observ" name="txt_observ" class="form-control" disabled>
+            </div>
+            
+            <div class="row mt-2">
+              <div class="col-12 text-center">
+                <span class="text-danger text-center h3">Esta seguro de eliminar el registro?</span>
+              </div>
+            </div>
+            
+            <div class="row mt-5">
+              <div class="col-12 text-center">
+                <button type="submit" id="btn_eliminar" name="btn_eliminar" class="btn btn-danger">Eliminar</button>
+              </div>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
