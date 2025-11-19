@@ -15,7 +15,7 @@ echo "<table id='tabla' name='tabla' class='table table-bordered'>
             </tr>
         </thead>
         <tbody>";
- 
+
     $f=1;
     while ($fila = $registros->fetch())
     {
@@ -24,14 +24,23 @@ echo "<table id='tabla' name='tabla' class='table table-bordered'>
                 <td>".$fila['CIC_CODI']."</td>
                 <td>".$fila['CIC_NOMB']."</td>
                 <td>".$fila['CIC_OBSERV']."</td>
- 
-                <td class='text-center'><img src='../../../Src/imgs/edit.png' onclick='abrirModalModificarCiclo(".$fila['CIC_CODI'].")' style='cursor: pointer;' title='Editar'></td>
+                
+                <td class='text-center'>
+                    <img src='../../../Src/imgs/edit.png' onclick='abrirModalModificarCiclo(".$fila['CIC_CODI'].")' style='cursor: pointer;' title='Editar'>
+                </td>
 
-                <td class='text-center'><img src='../../../Src/imgs/delete.png' onclick='ajax_eli_ciclo(".$fila['CIC_CODI'].");' data-bs-toggle='modal' data-bs-target='#eliminar'></td>
+                <td class='text-center'>
+                    <img src='../../../Src/imgs/delete.png' 
+                         onclick='ajax_eli_ciclo(".$fila['CIC_CODI'].");' 
+                         data-bs-toggle='modal' 
+                         data-bs-target='#eliminar'
+                         style='cursor: pointer;' 
+                         title='Eliminar'>
+                </td>
             </tr>";
         $f++;
     }
- 
+
 echo "  </tbody>
       </table>";
 ?>
